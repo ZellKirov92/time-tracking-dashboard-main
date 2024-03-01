@@ -2,130 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Time tracking dashboard</title>
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <meta name="description" content="creation of a Time tracking dashboard in Front-end from a project on the Front-end Mentor website.">
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/javaScript.js"></script>
+  <script src="./js/javaScript.js" type="module" defer></script>
 </head>
 <body>
   <article>
-    <section id="profil">
-      <div class="top-profil">
+    <header id="profil">
         <img src="./images/image-jeremy.png" alt="Photo De Jeremy">
         <p>Report for</p>
         <h1>Jeremy Robson</h1>
-      </div>
       <div class="bottom-button">
-        <button id="button-daily" type="button">Daily</button>
-        <button id="button-weekly" type="button">Weekly</button>
-        <button id="button-monthly" type="button">Monthly</button>
+        <button id="button_daily" type="button">Daily</button>
+        <button id="button_weekly" type="button">Weekly</button>
+        <button id="button_monthly" type="button">Monthly</button>
       </div>
-    </section>
+    </header>
     <section id="work">
       <div class="title">
-        <p>Work</p>
-        <a href="#"><img src="./images/icon-ellipsis.svg" alt="..." ></a>
+        <p class="title_Activity"></p>
+        <img src="./images/icon-ellipsis.svg" alt="..." >
       </div>
-        <div class="work-daily">
-        <h2>5hrs</h2><span>Previous</span>-<span>7hrs</span> <!-- daily --> 
+        <div class="work_daily">
+        <h2 class="daily_current display_daily"></h2>
+        <span>Previous</span>-<span class="daily_previous display_daily"></span>
         </div>
-        <div id="work-weekly">
-          <h2>32hrs</h2><span>Previous</span>-<span>36hrs</span>
+        <div id="work_weekly">
+          <h2 class="weekly_current display_weekly"></h2>
+          <span>Previous</span>-<span class="weekly_previous display_weekly"></span>
         </div>
-        <div class="work-monthly">
-          <h2>103hrs</h2><span>Previous</span>-<span>128hrs</span>
+        <div class="work_monthly">
+          <h2 class="monthly_current display_monthly"></h2>
+          <span>Previous</span>-<span class="monthly_previous display_monthly"></span>
         </div>    
     </section>
     <section id="play">
       <div>
         <div>
-          <p>Play</p>
-          <a href="#"><img src="./images/icon-play.svg" alt="..."></a>
+          <p class="title_Activity"></p>
+          <img src="./images/icon-play.svg" alt="...">
         </div>
-        <div class="play-daily">
-          <h2>1hr</h2><span>Previous</span>-<span>2hrs</span>
+        <div class="play_daily">
+          <h2 class="daily_current display_daily"></h2>
+          <span>Previous</span>-<span class="daily_previous display_daily"></span>
         </div>
-        <div class="play-weekly">
-          <h2>10hrs</h2><span>Previous</span>-<span>8hrs</span>
+        <div class="play_weekly">
+          <h2 class="weekly_current display_weekly"></h2>
+          <span>Previous</span>-<span class="weekly_previous display_weekly"></span>
         </div>
-        <div class="play-monthly">
-          <h2>23hrs</h2><span>Previous</span>-<span>29hrs</span>
+        <div class="play_monthly">
+          <h2 class="monthly_current display_monthly"></h2>
+          <span>Previous</span>-<span class="monthly_previous display_monthly"></span>
         </div>
       </div>    
     </section>
     <section id="study">
       <div>
-        <p>Study</p>
+        <p class="title_Activity"></p>
         <img src="./images/icon-study.svg" alt="...">
       </div>
-      <div class="study-daily">
-        <h2>0hrs</h2>
-        <span>Previous</span>-<span>1hr</span>
+      <div class="study_daily">
+        <h2 class="daily_current display_daily"></h2>
+        <span>Previous</span>-<span class="daily_previous display_daily"></span>
       </div>
       <div class="study-weekly">
-        <h2>4hrs</h2>
-        <span>Previous</span>-<span>7hrs</span>
+        <h2 class="weekly_current display_weekly"></h2>
+        <span>Previous</span>-<span class="weekly_previous display_weekly"></span>
       </div>
       <div class="study-monthly">
-        <h2>13hrs</h2>
-        <span>Previous</span>-<span>19hrs</span>
+        <h2 class="monthly_current display_monthly"></h2>
+        <span>Previous</span>-<span class="monthly_previous display_monthly"></span>
       </div>
     </section>
     <section id="exercise">
       <div>
-        <p>Exercise</p>
+        <p class="title_Activity"></p>
         <img src="./images/icon-exercise.svg" alt="..." >
       </div>
       <div class="exercise-daily">
-        <h2>1hr</h2>
-        <span>Previous</span>-<span>1hr</span>
+        <h2 class="daily_current display_daily"></h2>
+        <span>Previous</span>-<span class="daily_previous display_daily"></span>
       </div>
       <div class="exercise-weekly">
-        <h2>4hrs</h2>
-        <span>Previous</span>-<span>5hrs</span>
+        <h2 class="weekly_current display_weekly"></h2>
+        <span>Previous</span>-<span class="weekly_previous display_weekly"></span>
       </div>
       <div class="exercise-monthly">
-        <h2>11hrs</h2>
-        <span>Previous</span>-<span>18hrs</span>
+        <h2 class="monthly_current display_monthly"></h2>
+        <span>Previous</span>-<span class="monthly_previous display_monthly"></span>
       </div>
     </section>
     <section id="social">
       <div>
-        <p>Social</p>
+        <p class="title_Activity"></p>
         <img src="./images/icon-social.svg" alt="...">
       </div>
       <div class="social-daily">
-        <h2>1hr</h2>
-        <span>Previous</span>-<span>3hrs</span>
+        <h2 class="daily_current display_daily"></h2>
+        <span>Previous</span>-<span class="daily_previous display_daily"></span>
       </div>
       <div class="social-weekly">
-        <h2>5hrs</h2>
-        <span>Previous</span>-<span>10hrs</span>
+        <h2 class="weekly_current display_weekly"></h2>
+        <span>Previous</span>-<span class="weekly_previous display_weekly"></span>
       </div>
       <div class="social-monthly">
-        <h2>21hrs</h2>
-        <span>Previous</span>-<span>23hrs</span>
+        <h2 class="monthly_current display_monthly"></h2>
+        <span>Previous</span>-<span class="monthly_previous display_monthly"></span>
       </div>
     </section>
     <section id="selfcare">
       <div>
-        <p>Self Care</p>
+        <p class="title_Activity"></p>
         <img src="./images/icon-self-care.svg" alt="...">
       </div>
       <div class="selfcare-daily">
-        <h2>0hrs</h2>
-        <span>Previous</span>-<span>1hr</span>
+        <h2 class="daily_current display_daily"></h2>
+        <span>Previous</span>-<span class="daily_previous display_daily"></span>
       </div>
       <div class="selfcare-weekly">
-        <h2>2hrs</h2>
-        <span>Previous</span>-<span>2hrs</span>
+        <h2 class="weekly_current display_weekly"></h2>
+        <span>Previous</span>-<span class="weekly_previous display_weekly"></span>
       </div>
       <div class="selfcare-monthly">
-        <h2>7hrs</h2>
-        <span>Previous</span>-<span>11hrs</span>
+        <h2 class="monthly_current display_monthly"></h2>
+        <span>Previous</span>-<span class="monthly_previous display_monthly"></span>
       </div>
     </section>
   </article>
