@@ -1,39 +1,19 @@
-const dailyDisplay = document.getElementsByClassName("display_daily");
-const weeklyDisplay = document.getElementsByClassName("display_weekly");
-const monthlyDisplay = document.getElementsByClassName("display_monthly");
-export function displayDaily () {
-    for(let i = 0; i < weeklyDisplay.length; i++) {
-        weeklyDisplay[i].style.display = "none";
-    }
-    for(let i = 0; i < monthlyDisplay.length; i++) {
-        monthlyDisplay[i].style.display = "none";
-    }
-    for(let i = 0; i < dailyDisplay.length; i++) {
-        dailyDisplay[i].style.display = "";
-    }
+import { activities } from "./class.js";
+
+
+export function updateTitles() {
+const titleElements = document.getElementsByClassName('title_Activity');
+
+for (let i = 0; i < titleElements.length; i++) {
+    titleElements[i].textContent = activities[i].title;
+}
 }
 
-
-export function displayWeekly () {;
-    for(let i = 0; i < dailyDisplay.length; i++) {
-        dailyDisplay[i].style.display = "none";
-    }
-    for(let i = 0; i < monthlyDisplay.length; i++) {
-        monthlyDisplay[i].style.display = "none";
-    }
-    for(let i = 0; i < weeklyDisplay.length; i++) {
-        weeklyDisplay[i].style.display = "";
-    }
-}
-
-export function displayMonthly () {
-    for(let i = 0; i < dailyDisplay.length; i++) {
-        dailyDisplay[i].style.display = "none";
-    }
-    for(let i = 0; i < weeklyDisplay.length; i++) {
-        weeklyDisplay[i].style.display = "none";
-    }
-    for(let i = 0; i < monthlyDisplay.length; i++) {
-        monthlyDisplay[i].style.display = "";
+export function updateData (currentData, previousData) {
+    const currentElements = document.getElementsByClassName('current');
+    const previousElements = document.getElementsByClassName('previous');
+    for (let i = 0; i < activities.length; i++) {
+        currentElements[i].textContent = activities[i][currentData];
+        previousElements[i].textContent = "Previous - " + activities[i][previousData];
     }
 }
