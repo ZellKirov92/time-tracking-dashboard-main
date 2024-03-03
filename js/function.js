@@ -13,7 +13,7 @@ export function updateData (currentData, previousData) {
     const currentElements = document.getElementsByClassName('current');
     const previousElements = document.getElementsByClassName('previous');
     for (let i = 0; i < activities.length; i++) {
-        currentElements[i].textContent = activities[i][currentData];
-        previousElements[i].textContent = "Previous - " + activities[i][previousData];
+        currentElements[i].textContent = activities[i][currentData] + "hrs";
+        previousElements[i].textContent = "Previous - " + activities[i][previousData] + "hrs";
     }
 }
