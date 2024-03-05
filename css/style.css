@@ -185,7 +185,6 @@ header, section {
         max-width: 1440px;
         max-height: 1056px;
         padding: 50px 50px;
-        margin: 100px 5px;
         border-top: 143px solid hsl(226, 43%, 10%);
         border-bottom: 143px solid hsl(226, 43%, 10%);
     }
