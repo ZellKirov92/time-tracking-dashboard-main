@@ -83,6 +83,16 @@ article {
 
 .button:hover {
     color: hsl(236, 100%, 87%);
+    cursor: pointer;
+}
+
+.content:hover {
+    background-color: hsl(246, 80%, 60%);
+    cursor: pointer;
+}
+
+.img_content:hover {
+    cursor: pointer;
 }
 
 header, section {
@@ -174,7 +184,10 @@ header, section {
         gap: 10px 10px;
         max-width: 1440px;
         max-height: 1056px;
-        padding: 40px;
+        padding: 50px 50px;
+        margin: 100px 5px;
+        border-top: 143px solid hsl(226, 43%, 10%);
+        border-bottom: 143px solid hsl(226, 43%, 10%);
     }
 
     #profil {
